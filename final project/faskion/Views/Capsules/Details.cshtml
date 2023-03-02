@@ -1,0 +1,47 @@
+﻿@model faskion.Models.Capsule
+
+@{
+    ViewBag.Title = "Details";
+}
+<style>
+    .color2 a {
+        color: black;
+        font-size: 20px;
+    }
+
+    .center {
+        text-align: center;
+    }
+</style>
+
+<div class="center">
+
+    <h1>Details</h1>
+
+    <div>
+        <h2>Capsule</h2>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.capsuleCategory)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.capsuleCategory)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.capsuleStill)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.capsuleStill)
+            </dd>
+
+        </dl>
+    </div>
+    <p class="color2">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.CapsuleId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</div>

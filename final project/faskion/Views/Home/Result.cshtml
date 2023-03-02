@@ -1,0 +1,29 @@
+﻿
+@model faskion.Models.form
+<html>
+<head>
+    <title>CONTACT RESULT</title>
+</head>
+
+<body>
+    <div>
+
+        <h1>Thanks 🤩🧍‍♀️ </h1>
+        <h2>Your contact information has been received</h2>
+        <b>
+            Name:  @Model.Name<br />
+            SurName:  @Model.SurName<br />
+            Email:  @Model.Email<br />
+            Phone:  @Model.Phone<br />
+            Gender:  @Model.Gender<br />
+            Comment:  @Model.Comment<br />
+        </b>
+
+        @Html.ActionLink("Back to Home", "Index", "Home")
+
+        <br />
+    </div>
+
+</body>
+</html>
+

@@ -1,0 +1,69 @@
+.heading{
+    color: rgb(123, 65, 164);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    margin-top: 6rem;
+    border-bottom:3px solid rgb(147, 67, 181) ;
+}
+
+
+
+
+.form{
+    background-color: rgb(147, 67, 181) ;
+    margin-top: -30px;
+    margin-left: -200px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    width: 500px;
+    height: 1000px;
+    padding: 10px;
+    border-radius: 40px;
+    transform: translate(145%,4%);
+    box-shadow: 0px 0px 100px -2px rgba(109, 8, 197, 0.75);
+    font-style: italic;
+    font-weight:bold;
+  
+    
+    
+    
+}
+
+.form h3
+{
+    font-family: Times New Roman;
+}
+
+.comment{
+    height: 100px;
+}
+.phone
+{
+    width: 270px;
+}
+
+.submitBtn
+{
+background-color: rgb(240, 240, 240);
+cursor: pointer;
+border-radius: 2rem;
+border-color: rgb(173, 114, 190);
+border-width: 10px;
+width: 100px;
+height: 50px;
+font-weight:bold; 
+
+
+}
+.resetBtn
+{
+background-color: rgb(240, 240, 240);
+cursor: pointer;
+border-radius: 2rem;
+border-color: rgb(173, 114, 190);
+border-width: 10px;
+width: 100px;
+height: 50px;
+font-weight:bold; 
+}

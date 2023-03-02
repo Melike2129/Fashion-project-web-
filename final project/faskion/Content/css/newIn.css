@@ -1,0 +1,174 @@
+
+@keyframes blink{
+	0%{opacity:1;}
+	50%{opacity:0;}
+	100%{opacity:1;}
+}
+
+.title1
+{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    animation: blink 3s infinite;
+    
+}
+    
+.title1 h2 
+{
+    
+    
+    letter-spacing:2px;
+    font-size:1.4em;
+    text-transform:uppercase;
+    color:rgb(123, 65, 164);
+    font-size: 70px;
+    font-style: italic;
+    font-family:Arial, Helvetica, sans-serif;
+    
+    
+    
+
+}
+.title1 h2:before
+{
+    content:'';
+    position:absolute;
+    bottom:-10px;
+    left:50%;
+    transform:translateY(-50%);
+    width:50px;
+    height:10px;
+    background:var(--black);
+    
+
+
+}
+
+p{
+    color: var(--black);
+    font-size:15px;
+    line-height:3;
+    font-family:Arial, Helvetica, sans-serif ;
+    text-transform: none;
+    
+    
+}
+.about1 .contentBx
+{
+
+    width:800px;
+    height:350px;
+    margin: 0 auto;
+    text-align:center;
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-gap:300px;
+    border: 5px solid #670d82;
+
+}
+
+.about1 .contentBx .content
+{
+    position:relative;
+    
+}
+.title2 h2 
+{
+    
+    font-weight:500;
+    letter-spacing:2px;
+    font-size:1.4em;
+    text-transform:uppercase;
+    color:var(--black);
+    
+
+}
+.title2 h2:before
+{
+    content:'';
+    position:absolute;
+    bottom:-10px;
+    left:50%;
+    transform:translateY(-50%);
+    width:40px;
+    height:6px;
+    background:var(--black);
+    
+
+
+}
+
+
+.about2 .contentBx2
+{
+    margin: 0 auto;
+    text-align:center;
+    width:800px;
+    height:350px;
+    
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-gap:300px;
+    border: 5px solid #670d82;
+
+}
+.about2 .contentBx2 .content2
+{
+    position:relative;
+    
+}
+
+
+
+.title3 h2 
+{
+    
+    font-weight:500;
+    letter-spacing:2px;
+    font-size:1.4em;
+    text-transform:uppercase;
+    color:var(--black);
+    
+
+}
+.title3 h2:before
+{
+    content:'';
+    position:absolute;
+    bottom:-10px;
+    left:50%;
+    transform:translateY(-50%);
+    width:40px;
+    height:6px;
+    background:var(--black);
+    
+
+
+}
+
+
+.about3 .contentBx3
+{
+    
+    width:800px;
+    height:350px;
+    margin: 0 auto;
+    text-align:center;
+    
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-gap:300px;
+    border: 5px solid #670d82;
+
+}
+.about3 .contentBx3 .content3
+{
+    position:relative;
+    
+}

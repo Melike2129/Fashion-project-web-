@@ -1,0 +1,59 @@
+﻿@model IEnumerable<faskion.Models.Capsule>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+    <style>
+        .createnew a {
+            color: black;
+            font-size: 20px;
+        }
+
+        .coloredd2 a {
+            color: black;
+            font-size: 20px;
+        }
+
+        .center {
+            text-align: center;
+        }
+    </style>
+    <div class="center">
+        <h1>Index</h1>
+        <hr/>
+
+        <p class="createnew">
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.capsuleCategory) &nbsp;&nbsp;
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.capsuleStill) &nbsp;&nbsp;
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.capsuleCategory)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.capsuleStill)
+                    </td>
+                    <td class="coloredd2">
+                        @Html.ActionLink("Edit", "Edit", new { id = item.CapsuleId }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.CapsuleId }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.CapsuleId })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+

@@ -1,0 +1,52 @@
+﻿
+
+@model faskion.Models.form
+
+
+    <title>Welcome Form</title>
+
+    <h1 class="heading">CONTACT US </h1><br />
+    <div class="form">
+        @using (Html.BeginForm("Result","Home",FormMethod.Get))
+        {
+             @Html.ValidationSummary()
+           
+
+            {
+
+
+                <h3>GET IN TOUCH..</h3>
+                <p><i class="fa fa-user "> </i>Your Name      :@Html.TextBoxFor(x => x.Name)</p>
+                <p><i class="fa fa-user "> </i>Your Surname   :@Html.TextBoxFor(x => x.SurName)</p>
+                <p><i class="fa fa-envelope " aria-hidden="true"></i>E-Mail Adress  :@Html.TextBoxFor(x => x.Email)</p>
+                <p><i class="fa fa-envelope " aria-hidden="true"></i> Confirm E-Mail Adress  :@Html.TextBoxFor(x => x.EmailConfirm)</p>
+
+                <p><i class="fa fa-phone "> </i>Phone Number   :@Html.TextBoxFor(x => x.Phone)</p>
+                <p><i class="fa fa-venus-mars"> </i>Gender :</p>
+                <p>Male @Html.RadioButton("Gender", "Male")</p>
+                <p>Female @Html.RadioButton("Gender", "Female") </p>
+                <p><i class="fa fa-commenting " aria-hidden="true"></i>Comment   :@Html.TextAreaFor(x => x.Comment)</p>
+
+            }
+            <p>
+                <i class="fa fa-envelope"> </i>
+                Do you want to message our website?
+
+                @Html.DropDownListFor(x => x.Choice, new[]
+            {
+                new SelectListItem() {Text="Yes,I want a message",Value=bool.TrueString},
+                new SelectListItem() {Text="No,I don't want a message",Value=bool.FalseString}
+
+               }, "Choose one!")
+            </p>
+            <input type="submit" class="submitBtn" name="submit" value="Submit" />
+            <input type="reset" class="resetBtn" name="reset" value="Reset" />
+
+            
+
+
+         }
+    </div>
+    }
+
+

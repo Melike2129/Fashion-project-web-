@@ -1,0 +1,69 @@
+﻿@model IEnumerable<faskion.Models.Gift>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+    <style>
+        .createnew3 a {
+            color: black;
+            font-size: 20px;
+        }
+
+        .colorredd3 a {
+            color: black;
+            font-size: 20px;
+        }
+        .center {
+            text-align: center;
+        }
+    </style>
+
+    <div class="center">
+        <h1>Index</h1>
+        <hr/>
+
+
+
+        <p class="createnew3">
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.giftPrice) &nbsp; &nbsp;
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.giftName) &nbsp; &nbsp;
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.giftTitle) &nbsp; &nbsp;
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.giftPrice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.giftName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.giftTitle)
+                    </td>
+                    <br/>
+                    <td class="colorredd3">
+                        
+                        @Html.ActionLink("Edit", "Edit", new { id = item.GiftId }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.GiftId }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.GiftId })
+                    </td>
+                </tr>
+            }
+
+        </table>
+
+    </div>

@@ -1,0 +1,65 @@
+﻿@model IEnumerable<faskion.Models.NewIn>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+    <style>
+        .center4 
+        {
+            text-align: center;
+        }
+        .createnew4 a {
+            color: black;
+            font-size:20px;
+        }
+
+        .colorredd4 a {
+            color: black;
+            font-size:20px;
+        }
+    </style>
+
+    <div class="center4">
+        <h1>Index</h1>
+
+        <hr />
+        <p class="createnew4">
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.fabric_type)&nbsp;&nbsp;
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.color)&nbsp;&nbsp;
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NewIn_title)&nbsp;&nbsp;
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.fabric_type)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.color)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NewIn_title)
+                    </td>
+                    <td class="colorredd4">
+                        @Html.ActionLink("Edit", "Edit", new { id = item.NewInId }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.NewInId }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.NewInId })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>

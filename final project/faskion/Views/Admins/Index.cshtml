@@ -1,0 +1,83 @@
+﻿@model IEnumerable<faskion.Models.Admin>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+    <style>
+        .create a {
+            color: black;
+            font-size: 20px;
+        }
+        .coloredd a {
+            color: black;
+            font-size: 20px;
+        }
+        
+
+        .center {
+            text-align: center;
+        }
+    </style>
+    <div class="center">
+        <h1>Index</h1>
+        <hr/>
+        <p class="create">
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Admin_number)&nbsp;&nbsp;
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Admin_name)&nbsp;&nbsp;
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Admin_surName)&nbsp; &nbsp;
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Admin_age)&nbsp; &nbsp;
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Admin_phone)&nbsp; &nbsp;
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Admin_email)&nbsp; &nbsp;
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Admin_number)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Admin_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Admin_surName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Admin_age)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Admin_phone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Admin_email)
+                    </td>
+                    <td class="coloredd">
+                        @Html.ActionLink("Edit", "Edit", new { id = item.AdminId }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.AdminId }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.AdminId })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>

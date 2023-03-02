@@ -1,0 +1,82 @@
+﻿@model faskion.Models.Admin
+
+@{
+    ViewBag.Title = "Details";
+}
+<style>
+
+
+    .color a {
+        color: black;
+        font-size: 20px;
+    }
+
+    .center3 {
+        text-align: center;
+    }
+</style>
+
+<div class="center3">
+
+    
+    <h1>Details</h1>
+
+    <div>
+        <h2>Admin</h2>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Admin_number)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Admin_number)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Admin_name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Admin_name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Admin_surName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Admin_surName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Admin_age)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Admin_age)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Admin_phone)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Admin_phone)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Admin_email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Admin_email)
+            </dd>
+
+        </dl>
+    </div>
+    <p class="color">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.AdminId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</div>
